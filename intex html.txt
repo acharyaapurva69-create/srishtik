@@ -1,0 +1,119 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srishtik - India’s First Mushroom Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #2E8B57;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 { margin: 0; font-size: 36px; }
+        header p { margin: 5px 0 0 0; font-size: 18px; }
+
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        section { margin: 40px 0; }
+        h2 { text-align: center; color: #2E8B57; margin-bottom: 20px; }
+
+        .features, .steps { display: flex; flex-wrap: wrap; justify-content: space-around; }
+        .card {
+            background: white; padding: 20px; margin: 10px;
+            border-radius: 10px; flex: 1 1 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block; margin: 20px 10px; padding: 20px 40px;
+            font-size: 22px; color: white; background-color: #2E8B57;
+            border: none; border-radius: 10px; cursor: pointer;
+            text-decoration: none; transition: 0.3s;
+        }
+
+        .button:hover { background-color: #1E5937; }
+
+        footer { background: #2E8B57; color: white; text-align: center; padding: 20px 0; }
+
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                 background: rgba(0,0,0,0.6); justify-content: center; align-items: center; }
+        .modal-content {
+            background: white; padding: 30px; border-radius: 10px;
+            text-align: center; max-width: 400px; width: 90%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Srishtik</h1>
+        <p>India’s First Direct Mushroom Marketplace – Connecting Farmers and Buyers</p>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Srishtik</h2>
+            <p>Srishtik is India’s first mushroom marketplace that directly connects farmers and buyers. 
+               We make mushroom trading simple, transparent, and profitable for everyone involved.</p>
+        </section>
+
+        <section id="features">
+            <h2>Why Join Srishtik?</h2>
+            <div class="features">
+                <div class="card"><h3>Direct Connection</h3><p>Buyers get mushrooms directly from farmers without middlemen.</p></div>
+                <div class="card"><h3>Secure Payments</h3><p>All transactions tracked. You get paid safely and on time.</p></div>
+                <div class="card"><h3>Quality Assurance</h3><p>Expert-inspected mushrooms ensure premium quality.</p></div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <h2>How Srishtik Works</h2>
+            <div class="steps">
+                <div class="card"><h3>1. Join Srishtik</h3><p>Sign up as a farmer or buyer and create your profile.</p></div>
+                <div class="card"><h3>2. List or Order</h3><p>Farmers list mushrooms; buyers place orders according to quantity and type.</p></div>
+                <div class="card"><h3>3. Quality & Delivery</h3><p>Mushrooms are inspected and delivered safely, while payments are tracked securely.</p></div>
+            </div>
+        </section>
+
+        <section id="join">
+            <h2>Join Srishtik</h2>
+            <button class="button" onclick="showModal()">Join Now</button>
+        </section>
+    </div>
+
+    <div id="joinModal" class="modal">
+        <div class="modal-content">
+            <h2>Join Srishtik</h2>
+            <p>Please select your role:</p>
+            <a href="buyer.html" class="button">I’m a Buyer</a>
+            <a href="farmer.html" class="button">I’m a Farmer</a>
+            <br><br>
+            <button class="button" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Srishtik - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showModal() { document.getElementById('joinModal').style.display = 'flex'; }
+        function closeModal() { document.getElementById('joinModal').style.display = 'none'; }
+        window.onclick = function(event) {
+            let modal = document.getElementById('joinModal');
+            if (event.target == modal) modal.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
